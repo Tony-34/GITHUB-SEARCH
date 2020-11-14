@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GithubReposService } from './github-repos.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { GithubReposService } from './github-repos.service';
   styleUrls: ['./app.component.css']
   
 })
-export class AppComponent implements ngOnInit{
+export class AppComponent implements OnInit {
   title = 'Github';
 
  gitHubRepos: any = [];
