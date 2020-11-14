@@ -5,11 +5,19 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GithubReposService {
+   apiUrl = 'https://api.github.com/users';
 
   constructor(private http: HttpClient) { }
 
   getGithubPublicRepositories() {
-    const username = 'Tony-34';
-    return this.http.get('https://api.github.com/users/Tony-34/repos');
+    const username = 'username';
+    return this.http.get('${this.apiUrl}?per_page=10');
+
   }
+
+//   getGithubPublicRepositories(username: string) {
+    
+//     return this.http.get('${this.apiUrl}/${username}');
+
+// }
 }
