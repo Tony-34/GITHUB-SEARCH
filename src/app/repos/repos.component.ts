@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Repo  } from '../repo'
+import { Reposervice } from '../reposervice';
+// import { Reposervice } from './reposervice';
 
 
 @Component({
@@ -9,14 +11,15 @@ import {  Repo  } from '../repo'
 })
 export class ReposComponent implements OnInit {
  repo:Repo[];
-  constructor(private repoService:) { }
+
+  constructor(private repoService:Reposervice) { }
      getrepository(searchItem:string){
       this.repoService.getRepo(searchItem).subscribe(data=> {
         this.repo = data
         console.log(this.repo)
       });
      }
-  ngOnInit(): void {
+  ngOnInit() {
     this.getrepository('Tony-34')
   }
 

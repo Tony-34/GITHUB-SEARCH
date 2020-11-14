@@ -1,32 +1,36 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { GithubReposService } from './github-repos.service';
-import {  Subscription  } from 'rxjs';
+import { GitUser } from './git-user';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
   
 })
-export class AppComponent implements OnInit, OnDestroy {
-  title = 'Github';
+export class AppComponent {
+  user:GitUser[] =[]
 
- gitHubRepos: any = [];
-  mySubscription: Subscription;
+//  gitHubRepos: any = [];
+//   mySubscription: Subscription;
 
-  constructor(private gitHubService: GithubReposService){
+  constructor(private gitService:Githubservice){
   
   }
-  ngOnDestroy(): void {
-    this.mySubscription.unsubscribe();
-}
+//   ngOnDestroy(): void {
+//     this.mySubscription.unsubscribe();
+// }
 
-  ngOnInit(): void {
-    this.getRepos();
+  ngOnInit() {
+    
   }
-  getRepos(){
-    this.gitHubService.getGithubPublicRepositories().subscribe(repos => {
-      this.gitHubRepos = repos;
-      // console.log(JSON.stringify(repos));
-    });
-  }
+  // getRepos(){
+  //   this.gitHubService.getGithubPublicRepositories().subscribe(repos => {
+  //     this.gitHubRepos = repos;
+  //     // console.log(JSON.stringify(repos));
+  //   });
+  // }
+
+
+  
 }

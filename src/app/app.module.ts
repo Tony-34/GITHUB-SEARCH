@@ -2,20 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { GithubReposService } from './github-repos.service';
+import { AppComponent } from './app.component';    
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ReposComponent } from './repos/repos.component';
+import { Reposervice } from './reposervice';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SearchComponent,
-    ReposComponent
+    ReposComponent,
+    Reposervice,
+    UserProfileComponent
+    
 
   ],
   imports: [

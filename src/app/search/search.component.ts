@@ -1,6 +1,6 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
-import { GithubReposService } from '../github-repos.service';
 import { NgForm } from '@angular/forms';
+import { Reposervice } from '../reposervice';
   
 @Component({
   selector: 'app-search',
@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-  searchItem:GithubReposService;
+  searchItem:Reposervice;
   @Output() searchUser = new EventEmitter<any>();
   constructor() { }
 
