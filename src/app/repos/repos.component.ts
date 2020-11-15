@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Repo  } from '../repo'
-import { Reposervice } from '../reposervice';
-// import { Reposervice } from './reposervice';
+import { ReposerviceService } from '../reposervice.service';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Reposervice } from '../reposervice';
 export class ReposComponent implements OnInit {
  repo:Repo[];
 
-  constructor(private repoService:Reposervice) { }
+  constructor(private repoService:ReposerviceService) { }
      getrepository(searchItem:string){
       this.repoService.getRepo(searchItem).subscribe(data=> {
         this.repo = data

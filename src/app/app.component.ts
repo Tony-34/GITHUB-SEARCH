@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GitUser } from './git-user';
+import { GithubService } from './github.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent {
 //  gitHubRepos: any = [];
 //   mySubscription: Subscription;
 
-  constructor(private gitService:Githubservice){
+  constructor(private gitService:GithubService){
   
   }
 //   ngOnDestroy(): void {

@@ -1,7 +1,10 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { formatCurrency  }  from '@angular/common';
 import { NgForm } from '@angular/forms';
-import { Reposervice } from '../reposervice';
-  
+import { GitUser } from '../git-user';
+
+
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -9,7 +12,7 @@ import { Reposervice } from '../reposervice';
 })
 export class SearchComponent implements OnInit {
 
-  searchItem:Reposervice;
+  searchItem:GitUser;
   @Output() searchUser = new EventEmitter<any>();
   constructor() { }
 
@@ -18,7 +21,7 @@ export class SearchComponent implements OnInit {
     form.resetForm()
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

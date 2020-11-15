@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitUser } from '../git-user';
+import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
+ user:GitUser[] =[]
 
-  constructor() { }
+  constructor(private gitService:GithubService) { }
 
-  ngOnInit(): void {
+  getSearchItem(searchItem){
+    this.gitService.searchUser(searchItem).then(
+      (success) => {
+        this.user = this.gitService.user
+        console.log(this.user)
+      },
+      (error)=>{
+        console.log(error);
+      }
+      );
+  }
+  ngOnInit() {
+    this.getSearchItem('Tony-34');
   }
 
 }

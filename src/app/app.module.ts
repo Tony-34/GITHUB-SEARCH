@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ReposComponent } from './repos/repos.component';
-import { Reposervice } from './reposervice';
+// import { Reposervice } from './reposervice';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
@@ -18,7 +18,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     NavbarComponent,
     SearchComponent,
     ReposComponent,
-    Reposervice,
+    // Reposervice,
     UserProfileComponent
     
 
