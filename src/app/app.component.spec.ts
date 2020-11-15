@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
@@ -23,7 +23,12 @@ describe('AppComponent', () => {
   it(`should have as title 'Github'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Github');
+    expect(app).toBeTruthy();
+  });
+  it(`should have as title 'github-search'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('github-search');
   });
 
   it('should render title', () => {

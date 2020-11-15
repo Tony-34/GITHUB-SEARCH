@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ReposComponent } from './repos/repos.component';
 // import { Reposervice } from './reposervice';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     SearchComponent,
     ReposComponent,
     // Reposervice,
-    UserProfileComponent
+    UserProfileComponent,
+    PageNotFoundComponent
     
 
   ],
