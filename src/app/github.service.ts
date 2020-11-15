@@ -2,7 +2,7 @@ import { GitUser } from './git-user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment  } from '../environments/environment'
-// import{ SearchComponent } from '../search/search.component'
+import {  SearchComponent } from '../search/search.component'
 import { from } from 'rxjs';
 
 @Injectable({

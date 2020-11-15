@@ -1,4 +1,6 @@
-import { GitUser } from './git-user';
+// import { GitUser } from './git-user';
+
+import { GitUser } from "./git-user";
 
 describe('GitUser', () => {
   it('should create an instance', () => {
