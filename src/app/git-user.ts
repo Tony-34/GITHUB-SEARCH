@@ -1,7 +1,7 @@
 export class GitUser {
     constructor(
         public avatar_url:string,
-        public html_url:any,
+        // public html_url:any,
         public followers:number,
         public following:number,
         public login:string,
